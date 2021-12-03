@@ -10,8 +10,9 @@ import {Link, Route, Switch, withRouter} from "react-router-dom";
 import HomeContainer from "./HomeContainer";
 import FooterComponent from "../components/FooterComponent";
 import CatalogsContainer from './CatalogsContainer'
-import DetailProductComponent from "./DetailProductComponent";
+import DetailProductComponent from "./DetailProductContainer";
 import BascketContainer from "./BascketContainer";
+import Spinner from '../utils/spinner';
 
 export default withRouter(function App(props) {
     const dispatch = useDispatch();
@@ -59,9 +60,7 @@ export default withRouter(function App(props) {
           </MDBNav>
         </div>
         {loading && products.length == 0 ? (
-          <div className="spinner-border text-warning" role="status">
-            <span className="sr-only">Loading...</span>
-          </div>
+          <Spinner/>
         ) : (
           <>
             <div className={'global_body'}>

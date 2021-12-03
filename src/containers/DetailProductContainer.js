@@ -8,6 +8,7 @@ import ReactStars from "react-stars";
 import numberSeparator from "number-separator";
 import {addBascket} from "../store/orderReducer";
 import {toast} from "react-toastify";
+import Spinner from "../utils/spinner";
 
 function DetailProductContainer(props) {
   const id = +props.match.params.id;
@@ -81,9 +82,7 @@ function DetailProductContainer(props) {
   return (
     <div style={{backgroundColor: 'white', minHeight: 500}}>
       {loading ? (
-        <div className="spinner-border text-warning" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
+        <Spinner/>
       ) : (
         <MDBContainer>
           <MDBRow className={'mt-4 mb-4'}>

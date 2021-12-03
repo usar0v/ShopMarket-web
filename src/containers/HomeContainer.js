@@ -16,7 +16,7 @@ function HomeContainer(props) {
 
   return (
     <MDBContainer>
-      <div style={{fontSize: 28, paddingTop: 20}} className={'ml-4'}><b> Популярные товары </b></div>
+      <div style={{fontSize: 28, paddingTop: 20}} className={'ml-4 text-truncate'}><b> Популярные товары </b></div>
       <hr/>
       <MDBContainer>
         <MDBRow>

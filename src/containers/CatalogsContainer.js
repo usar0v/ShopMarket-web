@@ -26,7 +26,7 @@ function CatalogsContainer(props) {
       <button onClick={() => setLeft_menu(true)}  className={'menu_icon d-fixed d-md-none'}>
         <MDBIcon className={'my-auto'} icon="chevron-right" />
       </button>
-      <div style={{fontSize: 28, paddingTop: 20}} className={'mb-4 ml-4'}><b> Товары
+      <div style={{fontSize: 28, paddingTop: 20}} className={'mb-4 ml-4 text-truncate'}><b> Товары
         для {catalog.find(f => f.id === id)?.name.substr(0, 6)} </b></div>
       <MDBRow>
         <MDBCol md={4} lg={3}>
