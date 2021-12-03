@@ -29,6 +29,8 @@ function DetailProductContainer(props) {
 
   useEffect(() => {
     dispatch(getDetailProduct(id));
+    setItemSizes(bascket.find(v => v.id === item.id)?.sizes || [])
+    setItemColors(bascket.find(v => v.id === item.id)?.colors || [])
   }, []);
 
   useEffect(() => {
@@ -59,7 +61,7 @@ function DetailProductContainer(props) {
   const item_products = {
     brand: item.brand,
     colors: itemColors,
-    discount: item.price - item_price,
+    discount: item.discount ? item.price - item_price: item.discount,
     id: item.id,
     image: item.image,
     mini_category: item.mini_category,

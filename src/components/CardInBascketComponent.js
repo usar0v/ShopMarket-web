@@ -9,6 +9,7 @@ import {IMAGE_API_URL} from "../utils/settings";
 import numberSeparator from "number-separator";
 import {useDispatch} from "react-redux";
 import {addBascket} from "../store/orderReducer";
+import {Link, withRouter} from "react-router-dom";
 
 function CardInBascketComponent({item}) {
   const dispatch = useDispatch()
@@ -17,8 +18,10 @@ function CardInBascketComponent({item}) {
       <MDBTypography className={'text-center'} variant={'h6'}>{item.title}</MDBTypography>
       <MDBRow>
         <MDBCol size={12} sm={4} className={'text-center'}>
-          <MDBCardImage className="img-fluid mx-auto" src={`${IMAGE_API_URL}${item.image}`} waves/>
-            <button className={'remove_button'} onClick={() => dispatch(addBascket(item))}>Удалить</button>
+          <Link to={`product/${item.id}`}>
+            <MDBCardImage className="img-fluid mx-auto" src={`${IMAGE_API_URL}${item.image}`} waves/>
+          </Link>
+          <button className={'remove_button'} onClick={() => dispatch(addBascket(item))}>Удалить</button>
         </MDBCol>
         <MDBCol className={'mt-2'} size={12} sm={8}>
           <div className={'d-flex justify-content-between'}>
@@ -67,8 +70,7 @@ function CardInBascketComponent({item}) {
         </MDBCol>
       </MDBRow>
     </div>
-
   );
 }
 
-export default CardInBascketComponent;
+export default withRouter(CardInBascketComponent);
