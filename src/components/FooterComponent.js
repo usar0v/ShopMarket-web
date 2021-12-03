@@ -9,8 +9,7 @@ const FooterPage = () => {
           <MDBCol md="5">
             <h4 className="title">ShopMarket</h4>
             <p style={{fontSize: 16}}>
-              ShopMarket - rows and columns here to organize your footer
-              content.
+              ShopMarket - интернет магазин ожежд разного бренда в Кыргызстане
             </p>
           </MDBCol>
           <MDBCol md="4">

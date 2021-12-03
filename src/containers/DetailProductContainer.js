@@ -152,13 +152,13 @@ function DetailProductContainer(props) {
                       <del style={{fontSize: 19}} className={'text-muted ml-2'}>{numberSeparator(item.price * count)} c
                       </del>
                       <span> {numberSeparator((item.price - (item.price * item.discount / 100)) * count)}
-                        <u>c</u></span>
+                        <u> c</u></span>
                     </div>
                   </div>
                 </MDBTypography>
                 : <MDBTypography variant={'h4'}
                                  className={'text-right'}>{item.price ? numberSeparator(item.price * count) : item.price * count}
-                  <u>c</u></MDBTypography>
+                  <u> c</u></MDBTypography>
               }
               <div className={'text-center mt-2'}>
                 <MDBBtn onClick={() => filterAddBascket()}
