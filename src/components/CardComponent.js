@@ -14,11 +14,9 @@ const CardExample = ({item}) => {
             <div>{item.discount}%</div>
           </div> : null
         }
-        <MDBCardImage title={item.title} className="img-fluid"
-                      top
-                      style={{height: 260}}
-                      overlay="white-slight"
-                      src={`${IMAGE_API_URL}${item.image}`}/>
+        <div className={'card_image'} style={{backgroundImage: `url(${IMAGE_API_URL}${item.image})`}}>
+
+        </div>
         <MDBCardBody>
           <div className={'text-truncate'} style={{color: '#5e5e5e'}}>
             {item.title}
